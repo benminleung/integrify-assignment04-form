@@ -1,0 +1,115 @@
+body {
+	text-align: center;
+	background-color: #454e57;
+	color: white;
+	font-family: Arial;
+}
+
+body .bracket {
+	max-width: 1000px;
+	margin: auto;
+	padding: 0 3em;
+}
+
+p {
+
+}
+
+#personalInfo-right {
+	width: 60%;
+}
+
+.flex {
+	display: flex;
+	text-align: left;
+}
+
+.flex-column {
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.flex-row {
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.flex-row > :not(:first-of-type) {
+	margin-left: 1em;
+}
+
+.flex-child {
+	width: 100%;
+}
+
+#skills-dicipline input[type="radio"] {
+	display: none;
+}
+
+#skills-dicipline label {
+	border: 1px	solid white;
+	padding: 1em 0em;
+	width: 100%;
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+#skills-dicipline input[type="radio"]:hover+label {
+  background-color: #627282;
+}
+
+
+#skills-dicipline input[type="radio"]:checked+label {
+  background-color: #00AFF2;
+  border-color: #00AFF2
+}
+
+.skills-otherDiciplines-button {
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.skills-otherDiciplines-button input {
+	opacity: 1;
+}
+
+/*Makes the tick*/
+.skills-otherDiciplines-button::before {
+	content: "";
+	height: 6px;
+    width: 9px;
+    border-left: 2px solid;
+    border-bottom: 3px solid;
+    margin-bottom: 5px;
+    transform: rotate(-45deg);
+}
+
+#skills-otherDiciplines label p {
+	width: 50%;
+}
+
+.style-header {
+	border-bottom: medium solid #00AFF2;
+	padding-bottom: 0.7em;
+	margin-top: 1em auto;
+}
+
+.style-input {
+	border-bottom: 1px solid gray;
+}
+
+.style-rowPadding {
+	margin-top: 2em;
+}
+
+input[type="text"], input[type="number"] input[type="phone"] {
+	color: inherit;
+	width: 100%;
+	outline: none;
+	background-color: inherit;
+	border: none;
+	border-bottom: thin solid gray;
+	font-size: inherit;
+	margin-top: 1em;
+    margin-bottom: 1em;
+}
