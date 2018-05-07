@@ -19,7 +19,7 @@
 </head>
 <body>
 
-	<div class="bracket">
+	<form class="bracket">
 		<!-- Header -->
 		<div>
 			<h1>Lets talk</h1>
@@ -35,16 +35,16 @@
 				<h2 class="style-header">1. Personal information</h2>
 				<div class="flex flex-row style-rowPadding">
 					<div class="flex flex-column flex-child">
-						<input type="text" name="" placeholder="Full name*"/>
-						<input type="text" name="" placeholder="Email*"/>
-						<input type="text" name="" placeholder="Re-enter email*"/>
+						<input type="text" name="" placeholder="Full name*" required/>
+						<input type="email" name="" placeholder="Email*" required/>
+						<input type="email" name="" placeholder="Re-enter email*" required/>
 					</div>
 					<div id="personalInfo-right" class="flex flex-column flex-child">
-						<input type="text" name="" placeholder="Phone*"/>
+						<input type="text" name="" placeholder="Phone*" required/>
 					</div>
 				</div>
 				<div class="style-rowPadding">
-					<input type="text" name="" placeholder="Adress*"/>
+					<input type="text" name="" placeholder="Adress*" required/>
 					<div class="flex flex-row flex-child">
 						<input type="text" name="" placeholder="City*"/>
 						<input type="text" name="" placeholder="State"/>
@@ -66,7 +66,7 @@
 				<!-- Dicipline -->
 				<div class="flex flex-column">
 					<p>Which is your primary design discipline?</p>
-					<form id="skills-diciplineId" class="skills-dicipline flex flex-row flex-child">
+					<div id="skills-diciplineId" class="skills-dicipline flex flex-row flex-child">
 						<script type="text/javascript">
 							radioButtonGen([
 								'Design Research',
@@ -75,7 +75,7 @@
 								'Front-end Dev',
 								]);
 						</script>
-					</form>
+					</div>
 				</div>
 				<div class="flex flex-row flex-child">
 
@@ -144,7 +144,7 @@
 				<h2 class="style-header">3. Porfolio</h2>
 				<p>Prove you're IBM's next great designer by showing us who you are. What you've done. How you think. Tell us your story.</p>
 				<div>
-					<input type="text" name="" placeholder="Portfolio link*"/>
+					<input type="text" name="" placeholder="Portfolio link*" required/>
 					<textarea rows="7" class="style-rowPadding" placeholder="Anything else (another link, availability, etc.)?"></textarea>
 				</div>
 			</div>
@@ -152,9 +152,9 @@
 
 		<!-- Footer -->
 		<div class="flex flex-row">
-			<div class="footer-submit">Submit</div>
+			<input type="submit" value="submit" class="footer-submit">
 		</div>
-	</div>
+	</form>
 
 </body>
 </html>
