@@ -28,6 +28,14 @@ textarea {
 	width: 60%;
 }
 
+.checkboxDiv input{
+	display: none;
+}
+
+.checkboxDiv label {
+	padding: 0.5em;
+}
+
 .flex {
 	display: flex;
 	text-align: left;
@@ -69,7 +77,6 @@ textarea {
 .footer-submit:active {
 	border: 1px inset #0092cc;
 }
-
 
 .skills-dicipline input[type="radio"] {
 	display: none;
@@ -153,4 +160,8 @@ input[type="text"], input[type="number"] input[type="phone"] {
 	font-size: inherit;
 	margin-top: 1em;
     margin-bottom: 1em;
+}
+
+input:invalid {
+	color: tomato;
 }
