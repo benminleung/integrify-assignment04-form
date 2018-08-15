@@ -133,15 +133,15 @@ function submitButton() {
 
 
 // for testing purposes. Sets values for inputs.
-(function testInputValueAdder() {
-	document.getElementById('nameId').value = "Ben";
-	document.getElementById('phoneId').value = "123456789";
-	document.getElementById('emailId1').value = "a@b.c";
-	document.getElementById('emailId2').value = "a@b.c";
-	document.getElementById('addressId').value = "123 charlie street";
-	document.getElementById('cityId').value = "Hel";
-	document.getElementById('stateId').value = "";
-	document.getElementById('countryId').value = "Fin";
-	document.getElementById('zipId').value = "12345";
-	document.getElementById('portfolioId').value = "a.c";
-})();
+// (function testInputValueAdder() {
+// 	document.getElementById('nameId').value = "Ben";
+// 	document.getElementById('phoneId').value = "123456789";
+// 	document.getElementById('emailId1').value = "a@b.c";
+// 	document.getElementById('emailId2').value = "a@b.c";
+// 	document.getElementById('addressId').value = "123 charlie street";
+// 	document.getElementById('cityId').value = "Hel";
+// 	document.getElementById('stateId').value = "";
+// 	document.getElementById('countryId').value = "Fin";
+// 	document.getElementById('zipId').value = "12345";
+// 	document.getElementById('portfolioId').value = "a.c";
+// })();
