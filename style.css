@@ -28,6 +28,14 @@ textarea {
 	width: 60%;
 }
 
+.checkboxDiv input{
+	display: none;
+}
+
+.checkboxDiv label {
+	padding: 0.5em;
+}
+
 .flex {
 	display: flex;
 	text-align: left;
@@ -70,7 +78,6 @@ textarea {
 	border: 1px inset #0092cc;
 }
 
-
 .skills-dicipline input[type="radio"] {
 	display: none;
 }
@@ -91,25 +98,38 @@ textarea {
   	border-color: #00AFF2
 }
 
-.skills-checkbox-button {
-	justify-content: flex-start;
-	align-items: center;
-	margin: 1em 0;
+.skills-checkbox input {
+	opacity: 0;
 }
 
-.skills-checkbox-button input {
+.skills-checkbox input[type="checkbox"]:checked + label .tick {
 	opacity: 1;
 }
 
+.skills-checkbox-button {
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.skills-checkbox-button span {
+	height: 1em;
+	width: 1em;
+	border: medium solid white;
+	margin-right: 1em;
+}
+
+
 /*Makes the tick*/
-.skills-checkbox-button::before {
+.skills-checkbox-button .tick {
 	content: "";
 	height: 6px;
     width: 9px;
     border-left: 2px solid;
     border-bottom: 3px solid;
-    margin-bottom: 5px;
+    margin: auto;
+    margin-top: .1em;
     transform: rotate(-45deg);
+    opacity: 0;
 }
 
 #skills-checkbox label p {
@@ -140,4 +160,8 @@ input[type="text"], input[type="number"] input[type="phone"] {
 	font-size: inherit;
 	margin-top: 1em;
     margin-bottom: 1em;
+}
+
+input:invalid {
+	color: tomato;
 }

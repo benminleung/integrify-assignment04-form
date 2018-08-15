@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
-
-	<script type="text/javascript">
-		function radioButtonGen (list) {
-			list.forEach(function(item){
-				document.getElementById("skills-diciplineId").innerHTML += `<input type="radio" name="diciplineButton" id="${item}"><label for="${item}">${item}</label>`;
-			});
-		};
-	</script>
 
 </head>
 <body>
 
-	<div class="bracket">
+	<form id="theForm" class="bracket">
 		<!-- Header -->
 		<div>
 			<h1>Lets talk</h1>
@@ -31,28 +27,27 @@
 				<h2 class="style-header">1. Personal information</h2>
 				<div class="flex flex-row style-rowPadding">
 					<div class="flex flex-column flex-child">
-						<input type="text" name="" placeholder="Full name*"/>
-						<input type="text" name="" placeholder="Email*"/>
-						<input type="text" name="" placeholder="Re-enter email*"/>
+						<input type="text" id="nameId" name="name" placeholder="Full name*"/>
+						<input type="text" id="emailId1" name="email1" placeholder="Email*"/>
+						<input type="text" id="emailId2" name="email2" placeholder="Re-enter email*"/>
 					</div>
 					<div id="personalInfo-right" class="flex flex-column flex-child">
-						<input type="text" name="" placeholder="Phone*"/>
+						<input type="text" id="phoneId" name="phone" placeholder="Phone*"/>
 					</div>
 				</div>
-				<div class="style-rowPadding">
-					<input type="text" name="" placeholder="Adress*"/>
+				<div class="style-rowPadding ">
+					<input type="text" id="addressId" name="" placeholder="Adress*"/>
 					<div class="flex flex-row flex-child">
-						<input type="text" name="" placeholder="City*"/>
-						<input type="text" name="" placeholder="State"/>
-						<input type="text" name="" placeholder="Country/Region*"/>
-						<input type="text" name="" placeholder="Zip/Postal code"/>
+						<input type="text" id="cityId" name="" placeholder="City*"/>
+						<input type="text" id="stateId" name="" placeholder="State"/>
+						<input type="text" id="countryId" name="" placeholder="Country/Region*"/>
+						<input type="text" id="zipId" name="" placeholder="Zip/Postal code"/>
 					</div>
 				</div>
 				
 				<div class="style-rowPadding">
-					<input type="text" name="" placeholder="How did you hear about us"/>
+					<input type="text" id="howId" name="" placeholder="How did you hear about us?"/>
 				</div>
-				
 			</div>
 
 			<!-- 2. Skills and location -->
@@ -61,63 +56,73 @@
 
 				<!-- Dicipline -->
 				<div class="flex flex-column">
-					<p>Which is your primary design discipline?</p>
-					<form id="skills-diciplineId" class="skills-dicipline flex flex-row flex-child">
-						<script type="text/javascript">
-							radioButtonGen([
-								'Design Research',
-								'Visual Design',
-								'UX Design',
-								'Front-end Dev',
-								'JS renderer'
-								]);
-						</script>
-					</form>
+					<p id="">Which is your primary design discipline?</p>
+					<div id="skills-diciplineId" class="skills-dicipline flex flex-row flex-child buttonForm">
+						<input type="radio" name="diciplineButton" id="id1"><label for="id1">Design Research</label>
+						<input type="radio" name="diciplineButton" id="id2"><label for="id2">Visual Design</label>
+						<input type="radio" name="diciplineButton" id="id3"><label for="id3">UX Design</label>
+						<input type="radio" name="diciplineButton" id="id4"><label for="id4">Front-end Dev</label>
+					</div>
 				</div>
 				<div class="flex flex-row flex-child">
 
 					<!-- Experience -->
 					<div class="flex flex-column flex-child">
 						<p>Do you have experience with any other diciplines?</p>
-						<div class="skills-checkbox flex-child">
-							<label class="flex flex-row skills-checkbox-button">
-								<input type="checkbox" name="" checked="checked">Visual Design
+						<div class="skills-checkbox flex-child buttonForm checkboxDiv">
+							<input id="check9" type="checkbox" >
+							<label for="check9" class="flex flex-row skills-checkbox-button">
+								<span><div class="tick"></div></span>Visual Design
 							</label>
-							<label class="flex flex-row skills-checkbox-button">
-								<input type="checkbox" name="">UX Design
+							<input id="check10" type="checkbox" >
+							<label for="check10" class="flex flex-row skills-checkbox-button">
+								<span><div class="tick"></div></span>UX Design
 							</label>
-							<label class="flex flex-row skills-checkbox-button">
-								<input type="checkbox" name="">Front-end Development
+							<input id="check11" type="checkbox" >
+							<label for="check11" class="flex flex-row skills-checkbox-button">
+								<span><div class="tick"></div></span>Front-end Development
+							</label>
+							<input id="check12" type="checkbox" >
+							<label for="check12" class="flex flex-row skills-checkbox-button">
+								<span><div class="tick"></div></span>None
 							</label>
 						</div>
 					</div>
 
 					<div class="flex flex-column flex-child">
 						<p>Where are you interested in working?</p>
-						<div class="skills-checkbox flex-child">
-							<label class="flex flex-row skills-checkbox-button">
-								<input type="checkbox" name="" checked="checked">Austin, Texas
+						<div class="skills-checkbox flex-child buttonForm checkboxDiv">
+							<input id="check1" type="checkbox" >
+							<label for="check1" class="flex flex-row skills-checkbox-button">
+								<span><div class="tick"></div></span>Austin, Texas
 							</label>
-							<label class="flex flex-row skills-checkbox-button">
-								<input type="checkbox" name="">New York, New York
+							<input id="check2" type="checkbox" >
+							<label for="check2" class="flex flex-row skills-checkbox-button">
+								<span><div class="tick"></div></span>New York, New York
 							</label>
-							<label class="flex flex-row skills-checkbox-button">
-								<input type="checkbox" name="">Toronto, Canada
+							<input id="check3" type="checkbox" >
+							<label for="check3" class="flex flex-row skills-checkbox-button">
+								<span><div class="tick"></div></span>Toronto, Canada
 							</label>
-							<label class="flex flex-row skills-checkbox-button">
-								<input type="checkbox" name="">Shanghai, China
+							<input id="check4" type="checkbox" >
+							<label for="check4" class="flex flex-row skills-checkbox-button">
+								<span><div class="tick"></div></span>Shanghai, China
 							</label>
-							<label class="flex flex-row skills-checkbox-button">
-								<input type="checkbox" name="">Dublin, Ireland
+							<input id="check5" type="checkbox" >
+							<label for="check5" class="flex flex-row skills-checkbox-button">
+								<span><div class="tick"></div></span>Dublin, Ireland
 							</label>
-							<label class="flex flex-row skills-checkbox-button">
-								<input type="checkbox" name="">Hursley, United Kingdom
+							<input id="check6" type="checkbox" >
+							<label for="check6" class="flex flex-row skills-checkbox-button">
+								<span><div class="tick"></div></span>Hursley, United Kingdom
 							</label>
-							<label class="flex flex-row skills-checkbox-button">
-								<input type="checkbox" name="">Boeblingen, Germany
+							<input id="check7" type="checkbox" >
+							<label for="check7" class="flex flex-row skills-checkbox-button">
+								<span><div class="tick"></div></span>Boeblingen, Germany
 							</label>
-							<label class="flex flex-row skills-checkbox-button">
-								<input type="checkbox" name="">Somewhere else
+							<input id="check8" type="checkbox" >
+							<label for="check8" class="flex flex-row skills-checkbox-button">
+								<span><div class="tick"></div></span>Somewhere else
 							</label>
 						</div>
 					</div>
@@ -130,7 +135,7 @@
 				<h2 class="style-header">3. Porfolio</h2>
 				<p>Prove you're IBM's next great designer by showing us who you are. What you've done. How you think. Tell us your story.</p>
 				<div>
-					<input type="text" name="" placeholder="Portfolio link*"/>
+					<input type="text" id="portfolioId" name="" placeholder="Portfolio link*"/>
 					<textarea rows="7" class="style-rowPadding" placeholder="Anything else (another link, availability, etc.)?"></textarea>
 				</div>
 			</div>
@@ -138,9 +143,11 @@
 
 		<!-- Footer -->
 		<div class="flex flex-row">
-			<div class="footer-submit">Submit</div>
+			<div class="footer-submit" id="submitId">Submit</div>
 		</div>
-	</div>
+	</form>
+
+	<script type="text/javascript" src="script.js"></script>
 
 </body>
 </html>
